@@ -5,3 +5,4 @@ const Footer = () => {
         <h1>Site developed by Miles Cunningham (c) 2022</h1>
     </footer>
 }
+export default Footer

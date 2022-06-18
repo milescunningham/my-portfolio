@@ -5,6 +5,8 @@ module.exports = {
     siteUrl: `https://www.yourdomain.tld`,
   },
   plugins: [
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -18,7 +20,8 @@ module.exports = {
         name: `posts`,
         path: `${__dirname}/src/posts`
       },
-    },{
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
@@ -26,13 +29,14 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
-        name: `components`,
-        path: `${__dirname}/src/components`
+        fonts: [
+          `Roboto`,
+          `Roboto\:300,400,400i,700` // you can also specify font weights and styles
+        ],
+        display: 'swap',
       },
     },
-    "gatsby-plugin-image",
-    "gatsby-plugin-sharp",
   ],
 }

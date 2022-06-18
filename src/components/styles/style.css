@@ -8,12 +8,13 @@ html {
     font-size: 1em;
 }
 a {
-    color:firebrick
+    color:firebrick;
+    text-decoration: none;
     
 }
 a:hover {
     text-decoration: underline;
 }
 a:visited {
-    color:tomato
+    color:tomato;
 }
